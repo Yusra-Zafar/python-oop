@@ -17,7 +17,7 @@ AttributeError: 'list' object has no attribute 'upper'
 # Core concepts in OOP
 ![Core concepts in OOP](OOP_concepts.png)
 
-### 1. Class
+## 1. Class
 - Blueprint of how an object will behave and what it will do
 - If everthing in python is an object, so an object must belong to a class
 ```
@@ -43,7 +43,7 @@ class CarClass:
 ```
 
 
-### 2. Object
+## 2. Object
 - Instance of a class
 ```
 object = ClassName()
@@ -106,6 +106,10 @@ Here comes magic methods:
         OUTPUT: 
         12/9
 
+3. **\__sub__ method**
+4. **\__mul__ method**
+5. **\__truediv__ method**
+    
 d. **Constructor**: Magic/Special method that gets called/executed when an object of that class is created. Its control is not given to the user. All the configuration related tasks that should be done automatically when the software opens, should be written inside the constructor.
 
 e. **self**: It is the object with which you are working right now. Jis bhi object k saath aap abhi kaam kr rhe ho, wahi self he. 
@@ -122,10 +126,20 @@ e. **self**: It is the object with which you are working right now. Jis bhi obje
     2125115978144   # id of cat
 
 > *Only the object can access it's class's data and methods. Even one mehtod cannot access another method or data in it's own class. So, we pass self into the method to receive the object parameter. Also, we use self.method to call the method. In python, obj.class() means the obj is getting passed as the parameter in class() by default.* 
-    
 
+f. **Instance variable**: The variable defined in constructor method for which every object's value is different.
 
+g. **Getter and Setter**: Getter --> A method for private data member to fetch the data if needed. 
+ Setter --> Set the private data member's value if needed but according to my set logic, so that nothing crashes
 
+## 3. Encapsulation
+- If there is some data/method in a class that should not be publicly visible outside the class, hide it through encapsulation. It can be used inside the class.
+- Put __ (double underscore) before the variable/method name to make it private in Python.
+- If we try to access the private variable through putting __ before it, it will not be accessed because it will create a new variable instead of accessing that private variable. REASON IS BELOW...
+- When we put __, that name gets internally converted to name like this: _ClassName__variable_name. For example, in our Atm example if we hide the pin variable, it will be internally converted to _Atm__pin!
+- BUT nothing in Python is truly private. You can still access it through the new name if needed.
+- **BUT WHY DO WE NEED ENCAPSULATION?** Because data is sensitive. We cannot let anybody access and modify our data, which could crash our system or do unwanted things. So, we first make it private, and then make two functions getter and setter in case if they need access. 
 
+An example of class diagram where + shows public and - shows private.
 
-### 3. 
+![class_diagram](class_diagram.png)

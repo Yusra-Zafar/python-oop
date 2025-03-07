@@ -2,7 +2,7 @@
 
 class Fraction():
     def __init__(self):
-        self.numerator = int(input("Numerator: "))
+        self.numerator = int(input("Numerator: "))   # instance variable that is different for each object
         self.denominator = int(input("Denominator: "))
 
 
