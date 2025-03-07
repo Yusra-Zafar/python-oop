@@ -29,7 +29,7 @@ a = 2   # this object belongs to class int
 print(type(a))
 <class 'int'>
 ```
-**So, in Python, we can say that data type is a class and the variable is an object of that class.**
+> **So, in Python, we can say that data type is a class and the variable is an object of that class.**
 
 Class has 2 things: Data/Property (noun/description of object) & Method/Function (verb/what object can do)
 
@@ -59,6 +59,22 @@ b. **Method**: is a function that belongs to a class, can be accessed by the obj
 c. **Magic/special method**: Starts and ends with double underscores. An object doesn't call these methods. They get called on a given specific criteria automatically. 
 
 d. **Constructor**: Magic/Special method that gets called/executed when an object of that class is created. Its control is not given to the user. All the configuration related tasks that should be done automatically when the software opens, should be written inside the constructor.
+
+e. **self**: It is the object with which you are working right now. Jis bhi object k saath aap abhi kaam kr rhe ho, wahi self he. 
+
+    
+    class Animal():
+    def __init__(self):
+        print(id(self))
+
+    cat = Animal()
+    print(id(cat))
+
+    2125115978144   # id of self
+    2125115978144   # id of cat
+
+> *Only the object can access it's class's data and methods. Even one mehtod cannot access another method or data in it's own class. So, we pass self into the method to receive the object parameter. Also, we use self.method to call the method. In python, obj.class() means the obj is getting passed as the parameter in class() by default.* 
+    
 
 
 

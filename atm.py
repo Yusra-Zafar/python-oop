@@ -38,6 +38,7 @@ class Atm:
     def create_pin(self):
         self.pin = input("Enter PIN: ")
         print("\n PIN created successfully!\n")
+        self.menu()
     
 
     def deposit(self):
@@ -49,6 +50,7 @@ class Atm:
             print(f"Deposited {deposit_amount} successfully! \n Your current balance is {self.balance}.")
         else:
             print("Invalid PIN!")
+        self.menu()
 
 
     def withdraw(self):
@@ -66,6 +68,7 @@ class Atm:
 
         else:
             print("Invalid PIN")
+        self.menu()
 
 
     def check_balance(self):
@@ -75,6 +78,7 @@ class Atm:
             print(self.balance)
         else:
             print("Invalid PIN")
+        self.menu()
 
 obj = Atm()
 
