@@ -92,6 +92,6 @@ class Atm:
             print("Invalid PIN")
         self.menu()
 
-obj = Atm()
+obj = Atm()  # obj: reference variable
 obj.get_pin()
 

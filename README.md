@@ -52,11 +52,11 @@ car1 = CarClass()   # car1 is an object of class CarClass
 
 **IMPORTANT CONCEPTS:** 
 
-a. **Function**: is any function, can be accessed by anyone  
+A. **Function**: is any function, can be accessed by anyone  
 
-b. **Method**: is a function that belongs to a class, can be accessed by the object of that class.
+B. **Method**: is a function that belongs to a class, can be accessed by the object of that class.
 
-c. **Magic/special method**: Starts and ends with double underscores. An object doesn't call these methods. They get called on a given specific criteria automatically. 
+C. **Magic/special method**: Starts and ends with double underscores. An object doesn't call these methods. They get called on a given specific criteria automatically. 
 
     class Fraction():
         def __init__(self, numerator, denominator):
@@ -110,11 +110,11 @@ Here comes magic methods:
 4. **\__mul__ method**
 5. **\__truediv__ method**
     
-d. **Constructor**: Magic/Special method that gets called/executed when an object of that class is created. Its control is not given to the user. All the configuration related tasks that should be done automatically when the software opens, should be written inside the constructor.
+D. **Constructor**: Magic/Special method that gets called/executed when an object of that class is created. Its control is not given to the user. All the configuration related tasks that should be done automatically when the software opens, should be written inside the constructor.
 
-e. **self**: It is the object with which you are working right now. Jis bhi object k saath aap abhi kaam kr rhe ho, wahi self he. 
+E. **self**: It is the object with which you are working right now. Jis bhi object k saath aap abhi kaam kr rhe ho, wahi self he. 
 
-    
+   
     class Animal():
     def __init__(self):
         print(id(self))
@@ -127,10 +127,12 @@ e. **self**: It is the object with which you are working right now. Jis bhi obje
 
 > *Only the object can access it's class's data and methods. Even one mehtod cannot access another method or data in it's own class. So, we pass self into the method to receive the object parameter. Also, we use self.method to call the method. In python, obj.class() means the obj is getting passed as the parameter in class() by default.* 
 
-f. **Instance variable**: The variable defined in constructor method for which every object's value is different.
+F. **Instance variable**: The variable defined in constructor method for which every object's value is different.
 
-g. **Getter and Setter**: Getter --> A method for private data member to fetch the data if needed. 
+G. **Getter and Setter**: Getter --> A method for private data member to fetch the data if needed. 
  Setter --> Set the private data member's value if needed but according to my set logic, so that nothing crashes
+
+H. **Reference Variable**: In obj = Class(), technically obj is not the object itself, but in fact it is the reference variable that is pointing to the memory location where Class object has been created. 
 
 ## 3. Encapsulation
 - If there is some data/method in a class that should not be publicly visible outside the class, hide it through encapsulation. It can be used inside the class.
