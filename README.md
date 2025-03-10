@@ -127,14 +127,13 @@ E. **self**: It is the object with which you are working right now. Jis bhi obje
 
 > *Only the object can access it's class's data and methods. Even one mehtod cannot access another method or data in it's own class. So, we pass self into the method to receive the object parameter. Also, we use self.method to call the method. In python, obj.class() means the obj is getting passed as the parameter in class() by default.* 
 
-F. **Instance variable**: The variable defined in constructor method for which every object's value is different.
 
-G. **Getter and Setter**: Getter --> A method for private data member to fetch the data if needed. 
+F. **Getter and Setter**: Getter --> A method for private data member to fetch the data if needed. 
  Setter --> Set the private data member's value if needed but according to my set logic, so that nothing crashes
 
-H. **Reference Variable**: In obj = Class(), technically obj is not the object itself, but in fact it is the reference variable that is pointing to the memory location where Class object has been created. 
+G. **Reference Variable**: In obj = Class(), technically obj is not the object itself, but in fact it is the reference variable that is pointing to the memory location where Class object has been created. 
 
-I. **Pass by Reference**: We can pass our object as argument into a function. It will behave exactly the same as any other object in python like int, string, list, tuple etc. And OBJECTS ARE **MUTABLE**.
+H. **Pass by Reference**: We can pass our object as argument into a function. It will behave exactly the same as any other object in python like int, string, list, tuple etc. And OBJECTS ARE **MUTABLE**.
 
     class Customer:
         def __init__(self, name, gender):
@@ -163,7 +162,13 @@ I. **Pass by Reference**: We can pass our object as argument into a function. It
 > *If mutable data types like our objects or lists etc are passed by reference into a function, they might get changed because of the function definition. There could be some statements inside the function that could do permanent changes in the original object. But immutable data types won't change.*
 
 
-J. **Collection of Objects**: We can make a collection of our objects like a list, tuple or dictionary. But not a set because set needs immutable data type and objects are mutable.
+I. **Collection of Objects**: We can make a collection of our objects like a list, tuple or dictionary. But not a set because set needs immutable data type and objects are mutable.
+
+J. **Instance variable**: The variable defined in constructor method for which every object's value is different. Always initialized inside the class. Access through self (object)
+
+K. **Static/Class variable**: A variable whose value is same for all objects of the class. Opposite of instance variable. Always initialized outside the class. Access through class.
+
+L. **Static Method**: When dealing with static variables, we use static methods. It doesn't need an object (self) to be passed as parameter because it is not accessing any instance variable, rather it is using only the static/class variables through class name. 
 
 
 ## 3. Encapsulation
