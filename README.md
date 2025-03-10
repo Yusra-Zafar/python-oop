@@ -134,6 +134,38 @@ G. **Getter and Setter**: Getter --> A method for private data member to fetch t
 
 H. **Reference Variable**: In obj = Class(), technically obj is not the object itself, but in fact it is the reference variable that is pointing to the memory location where Class object has been created. 
 
+I. **Pass by Reference**: We can pass our object as argument into a function. It will behave exactly the same as any other object in python like int, string, list, tuple etc. And OBJECTS ARE **MUTABLE**.
+
+    class Customer:
+        def __init__(self, name, gender):
+            self.name = name
+            self.gender = gender
+
+    def greet(customer):
+        if customer.gender == "M":
+            print(f"Hello {customer.name} Sir!")
+        else:
+            print(f"Hello {customer.name} Mam!")
+
+        cust2 = Customer("Yusra", "F")
+        return cust2
+
+
+    cust = Customer("mutahar", "M")
+    new_cust = greet(cust)  # passing our our object into function as argument, similar to any object in python. receiving the returned object from function
+    print(new_cust.name)   # our object will behave exactly same as any other object in Python.
+
+
+**- Object can be passed in a function as argument**
+
+**- A function can return an object**
+
+> *If mutable data types like our objects or lists etc are passed by reference into a function, they might get changed because of the function definition. There could be some statements inside the function that could do permanent changes in the original object. But immutable data types won't change.*
+
+
+J. **Collection of Objects**: We can make a collection of our objects like a list, tuple or dictionary. But not a set because set needs immutable data type and objects are mutable.
+
+
 ## 3. Encapsulation
 - If there is some data/method in a class that should not be publicly visible outside the class, hide it through encapsulation. It can be used inside the class.
 - Put __ (double underscore) before the variable/method name to make it private in Python.
