@@ -182,3 +182,5 @@ L. **Static Method**: When dealing with static variables, we use static methods.
 An example of class diagram where + shows public and - shows private.
 
 ![class_diagram](class_diagram.png)
+
+ALL CREDIT GOES TO [CampusX]((https://youtu.be/Mf2RdpEiXjU?si=ztG2XXJyX63sQt6Q))!
