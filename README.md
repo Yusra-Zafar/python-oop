@@ -15,9 +15,9 @@ AttributeError: 'list' object has no attribute 'upper'
 - Generality to specificity
 - Programmer can make his own data types
 # Core concepts in OOP
-![Core concepts in OOP](OOP_concepts.png)
+![Core concepts in OOP](images/OOP_concepts.png)
 
-## 1. Class
+## 1. CLASS
 - Blueprint of how an object will behave and what it will do
 - If everthing in python is an object, so an object must belong to a class
 ```
@@ -43,7 +43,7 @@ class CarClass:
 ```
 
 
-## 2. Object
+## 2. OBJECT
 - Instance of a class
 ```
 object = ClassName()
@@ -170,8 +170,13 @@ K. **Static/Class variable**: A variable whose value is same for all objects of 
 
 L. **Static Method**: When dealing with static variables, we use static methods. It doesn't need an object (self) to be passed as parameter because it is not accessing any instance variable, rather it is using only the static/class variables through class name. 
 
+M. **Types of Relationship:** Aggregation & Inheritance
+    - **Aggregation**: has-a relationship, when one class needs another class for aggregation. For example, customer has-a address.
+    - **Inheritance**: is-a relationship, when one class inherits some properties of another child class. For example, elephant is-a animal.
+        ![types of relationship](images/relationship_types.png)
 
-## 3. Encapsulation
+
+## 3. ENCAPSULATION
 - If there is some data/method in a class that should not be publicly visible outside the class, hide it through encapsulation. It can be used inside the class.
 - Put __ (double underscore) before the variable/method name to make it private in Python.
 - If we try to access the private variable through putting __ before it, it will not be accessed because it will create a new variable instead of accessing that private variable. REASON IS BELOW...
@@ -181,6 +186,23 @@ L. **Static Method**: When dealing with static variables, we use static methods.
 
 An example of class diagram where + shows public and - shows private.
 
-![class_diagram](class_diagram.png)
+![class_diagram](images/class_diagram.png)
+
+
+## 4. INHERITANCE
+- child class inherits the following from parent class:
+  - all data members except for the private ones
+  - all methods
+  - constructor
+- helps in code reusability
+- follows DRY concept
+- always in upward direction, means only child can inherit from parent not vice versa
+![inheritance](images/inheritance.png)
+
+
+
+
+
+
 
 ALL CREDIT GOES TO [CampusX](https://youtu.be/Mf2RdpEiXjU?si=ztG2XXJyX63sQt6Q)!
