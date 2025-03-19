@@ -198,6 +198,8 @@ An example of class diagram where + shows public and - shows private.
 - follows DRY concept
 - always in upward direction, means only child can inherit from parent not vice versa
 ![inheritance](images/inheritance.png)
+- example1: if child has no constructor, parent's constructor will be called
+- example2: child can't access parent's private data members
 
 
 
