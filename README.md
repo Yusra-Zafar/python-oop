@@ -197,9 +197,15 @@ An example of class diagram where + shows public and - shows private.
 - helps in code reusability
 - follows DRY concept
 - always in upward direction, means only child can inherit from parent not vice versa
+  
 ![inheritance](images/inheritance.png)
-- example1: if child has no constructor, parent's constructor will be called
-- example2: child can't access parent's private data members
+
+**points to remember**
+- if child has no constructor, parent's constructor will be called
+- if child has it's own constructor, then parent's won't be called 
+- child can't access parent's private data members
+- when a child's object is made and same method is present in both parent and child, then the one in the child will be executed --> method overriding
+- super() is a method through which we can access methods and constructor of the parent inside the child class. It doesn't work outside class. Data member's can't be accessed. *It should be the first statement in child's method.*
 
 
 
