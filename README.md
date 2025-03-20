@@ -155,7 +155,7 @@ H. **Pass by Reference**: We can pass our object as argument into a function. It
     print(new_cust.name)   # our object will behave exactly same as any other object in Python.
 
 
-**- Object can be passed in a function as argument**
+> **- An object can be passed in a function as argument**
 
 **- A function can return an object**
 
@@ -200,6 +200,22 @@ An example of class diagram where + shows public and - shows private.
   
 ![inheritance](images/inheritance.png)
 
+### Types of Inheritance
+There are 5 types of inheritance in Python
+1. Single level inheritance
+   - One child has only one parent. Child can inherit all the properties of parent.
+1. Multi-level inheritance
+   - Chain of a child and a parent. Grandfather, father, child, grandchild etc. Every child can inherit all the properties of all parents. Grandchild can access it's father as well as grandfather's properties. The chain can grow in both directions.
+1. Hierarchichal inheritance
+   - One parent has multiple children. Every child can access its parent's properties.
+4. Multiple inheritance(*Not applicable in Java*)
+   - One child has multiple parents. It can access all properties of all parents. 
+   - **MRO - Method Resolution Order:** If both parents have same method, the one that is written first will be inherited first. Order matters in case of conflict.
+5. Hybrid inheritance
+   - Combination of any of the above.
+
+![inheritance types](images/inheritance_types.png)
+
 **points to remember**
 - if child has no constructor, parent's constructor will be called
 - if child has it's own constructor, then parent's won't be called 
@@ -207,7 +223,16 @@ An example of class diagram where + shows public and - shows private.
 - when a child's object is made and same method is present in both parent and child, then the one in the child will be executed --> method overriding
 - super() is a method through which we can access methods and constructor of the parent inside the child class. It doesn't work outside class. Data member's can't be accessed. *It should be the first statement in child's method.*
 
+## 5. POLYMORPHISM 
+poly means many, morph means faces --> multiple faces
 
+1. Method Overriding
+   - When child and parent have a method with the same name, which one will be called? When a child's object is made and same method is present in both parent and child, then the one in the child will be executed. This way the parent's method will be overridden.
+2. Method Overloading
+   - When one method performs different function for different inputs. Multiple methods with same name doesn't work in Python because the recent one overwrites the ones before it. *But works in Java.*
+   - Technically, it doesn't exist in Python. But can be achieved by using default arguments in the method.
+3. Operator Overloading
+   - When we make an operator behave other than it's default function, it is operator overloading. 
 
 
 
